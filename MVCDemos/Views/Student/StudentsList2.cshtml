@@ -1,0 +1,29 @@
+﻿@model IEnumerable<MVCDemos.Models.Student>
+@{
+    ViewData["Title"] = "StudentsList2";
+}
+
+<h1>StudentsList2</h1>
+ <h3> List of Students </h3>
+
+ <table>
+     <thead>
+         <th> Student ID </th>
+         <th> Name </th>
+         <th> Batch Code ID </th>
+         <th> Marks </th>
+     </thead>
+         <tbody>
+             @{foreach (Student temp in Model)
+                 {
+                   <tr>
+                       <td> @temp.Id  </td>
+                       <td> @temp.Name</td>
+                       <td> @temp.BatchCode</td>  
+                       <td> @temp.Marks </td>
+                   
+                   </tr>
+                 }
+             }
+         </tbody>
+ </table>

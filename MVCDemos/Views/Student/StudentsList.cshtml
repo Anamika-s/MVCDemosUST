@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewData["Title"] = "StudentsList";
+}
+
+<h1>StudentsList</h1>
+ <h3> List of Students </h3>
+   @{ foreach (var temp in ViewBag.Students)
+       { 
+           @temp.Id 
+           @temp.Name
+           @temp.BatchCode
+           @temp.Marks
+           <br />
+
+       }
+   }
+
